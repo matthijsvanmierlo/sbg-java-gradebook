@@ -10,18 +10,11 @@ public class ClassInfo extends JPanel {
 
     // Reference to the main controller
     Controller controller;
-    // Class average pane on left...
-    // Individual student view on right...
-    // Button for back navigation... (100 x 50)
+    // Buttons
     JButton backButton;
-    // Button for add assignment...
     JButton addAssignmentButton;
-    // Button for add standard...
     JButton addStandardButton;
-    // Button for edit assignment for each student...
-    // Button for delete assignment for each student...
-    // Font for all buttons on this screen...
-    // Combo Box to select student...
+    // Combo Box to select student
     JComboBox<String> students;
     // Combo Box to select standard
     JComboBox<String> standards;
@@ -29,7 +22,7 @@ public class ClassInfo extends JPanel {
     JComboBox<String> assignments;
     // Combo Box for selected standard by student...
     JComboBox<String> studentStandards;
-    // Label for Title
+    // Labels
     JLabel classStats;
     JLabel selectStudent;
     JLabel classAverage;
@@ -47,13 +40,17 @@ public class ClassInfo extends JPanel {
     ////////////////////////////////////////////////////////////////////////////////
 
     public ClassInfo(Controller _controller){
+
         //////////////////////////////////////
+
         setSize(new Dimension(StartProgram.SIZE, StartProgram.SIZE));
         setPreferredSize(new Dimension(StartProgram.SIZE, StartProgram.SIZE));
         setBackground(Color.LIGHT_GRAY);
         setLayout(null);
         controller = _controller;
+
         //////////////////////////////////////
+
         backButton = new JButton("Back");
         backButton.setFont(buttonFont);
         backButton.setBounds(300, 315, 150, 50);
@@ -79,6 +76,7 @@ public class ClassInfo extends JPanel {
         newGrade.setBounds(150, 335, 100, 30);
 
         //////////////////////////////////////
+
         students = new JComboBox<>(controller.currClass.getStudentNames().toArray(new String[0]));
         students.setBounds(25, 200, 250, 20);
         students.setFont(buttonFont);
