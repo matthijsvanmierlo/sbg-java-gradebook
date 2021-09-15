@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class ClassModel {
 
     ////////////////////////////////////////////////////////////////////////////////
+
     ArrayList<ClassStandard> standards;
     ArrayList<Student> students;
     String name;
+
     ////////////////////////////////////////////////////////////////////////////////
 
     public ClassModel(String _className, ArrayList<ClassStandard> _standards, ArrayList<Student> _students) {
