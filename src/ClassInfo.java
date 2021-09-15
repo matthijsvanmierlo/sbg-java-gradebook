@@ -239,6 +239,7 @@ public class ClassInfo extends JPanel {
                 }
             }
             updateStudentStatistics();
+            newGrade.setText("");
             refreshView();
         }
     }
